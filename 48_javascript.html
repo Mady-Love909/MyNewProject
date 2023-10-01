@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank Website</title>
+    <style>
+        :root{
+            --background-color : yellow;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bulb{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: var(--background-color);
+            margin: 20px ;
+        }
+        .bulb2{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+          
+            margin: 20px ;
+        }
+        #bulbbtn{
+            padding: 10px;
+            margin: 20px;
+            cursor: pointer;
+            background-color: var(--background-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>Mayank</h1>
+    <button id="btn">Click Me</button>
+    <button id="search">Search</button>
+
+    <div id="bulb" class="bulb bulb2"></div>
+    <button id="bulbbtn"></button>
+    <script>
+        let text = document.body.firstElementChild
+        let btn = document.getElementById("btn")
+        btn.onclick = () => {
+                alert("Hi " + text.innerHTML)
+            }
+        
+        
+        let search =  document.getElementById("search")
+
+        search.onclick = () =>{
+            const type = prompt("Enter Your Search");
+            window.location = `https://google.com/search?q=${type}`
+            window.focus
+        }
+        
+        let bulbbtn = document.getElementById("bulbbtn")
+        let bulb = document.getElementsByClassName("bulb")[0]
+        
+        // setInterval(async function(){
+        //     bulb.classList.toggle("bulb")
+        // },3000)
+        bulbbtn.innerHTML = "ON"
+        bulbbtn.onclick = () => {
+            bulb.classList.toggle("bulb")
+            if(bulbbtn.innerHTML =="ON"){
+            bulbbtn.innerHTML = "OFF"
+            
+       }
+       else{
+        bulbbtn.innerHTML = "ON"
+       }
+        }
+
+       
+
+      
+        
+    </script>
+</body>
+</html>

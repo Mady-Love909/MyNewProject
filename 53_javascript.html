@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>53 js course</title>
+</head>
+
+<body>
+    <script>
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                prompt("Enter the Correct value if 2+3 = ?")
+                let a = new Error("Yes I am Error")
+                resolve(5,a)
+            }, 3000);
+        })
+
+        promise.then((result) => {
+            if(error){
+                console.log("No u r wrong");
+
+            }
+            else{
+                console.log("U r");
+            }
+        },
+            (error) => {
+                console.log("Don't Wory try again");
+            })
+    </script>
+</body>
+
+</html>

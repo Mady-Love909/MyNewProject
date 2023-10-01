@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52 day course</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <script>
+        function loadStyle(href,rel) {
+            let style = document.createElement('style')
+            let link = document.createElement('link')
+            link.href = href;
+            link.rel = rel;
+            link.onload = () =>{
+                console.log("Style Loaded " + href);
+            }
+            document.head.appendChild(style)
+            style.appendChild(link)
+        }
+
+        loadStyle("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css","stylesheet")
+        function loadScript(src,callback) {
+            let script = document.createElement('script')
+            script.src = src;
+            script.onload = () =>{
+                console.log("Script Loaded " + src);
+                callback(null,src);
+            }
+            script.onerror = () =>{
+                
+                console.log("Error in Loading Script" + src);
+                callback(new Error("We Got some error"))
+            }
+            document.body.appendChild(script)
+        }
+
+        function getmsg(error,src){
+            if(error){
+                console.log(error);
+                return
+            }
+            alert("Your Script is loaded "+src);
+        }
+        loadScript("https://cdn.jsddelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",getmsg)
+    </script>
+</body>
+</html>
