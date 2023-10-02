@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60 Day of JS course</title>
+</head>
+<body>
+    <script>
+        // Try And Catch Error Handling
+
+        try{
+            // console.log(a);//Here a is not defined still js engine accept the error and catch block handles the errors
+
+            setTimeout(() => {
+                console.log(a);
+            }, 2000); //If we you're using setTimeout or setInterval like scheduling then you get error if you use the try block inside the scheduling then you can;t get any errror
+        }
+
+
+        // Error handling is still
+        catch(err){
+            console.log("You Got some errors");
+        }
+    </script>
+</body>
+</html>

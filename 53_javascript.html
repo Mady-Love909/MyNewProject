@@ -8,27 +8,81 @@
 </head>
 
 <body>
+
+    <input type="email" name="" id="email">
+    <button id="btn1">submit1</button>
+    <input type="number" name="" id="number">
+    <button id="btn2">submit2</button>
     <script>
-        let promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                prompt("Enter the Correct value if 2+3 = ?")
-                let a = new Error("Yes I am Error")
-                resolve(5,a)
-            }, 3000);
+        // let promise = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         let q = prompt("Enter your name")
+        //         if (q == "Mayank") {
+
+        //             resolve(q)
+        //             console.log("I am Successfully get logged in");
+        //         }
+        //         else {
+        //             reject(q)
+        //             console.log(new Error(" I am error here"));
+        //         }
+        //     }, 3000);
+        // })
+        // console.log(promise);
+
+        // promise.then((result) => {
+        //     let q2 = prompt("Enter your surname: ")
+        //     if (result == "Mayank" && q2 == "Sakat") {
+        //         console.log("I have successed in my program I am from then result block");
+        //     }
+        //     else {
+        //         console.log(new Error("Here is an error I am from then result failed block"));
+        //     }
+        // },
+        //     (error) => {
+        //         console.error("Please resolve it I am from then error block");
+        //     })
+
+
+        // promise.catch((error) => {
+        //     alert("We Got errors I am from catch block")
+        // })
+        
+        let email = document.getElementById("email")
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let number = document.getElementById("number")
+
+        let checkmyemail = new Promise((resolve, reject) => {
+            btn1.addEventListener('click',()=>{
+                if(email.value == "mayanksakat333@gmail.com"){
+                    resolve(email)
+                    console.log("email is correct");
+                    
+                }
+                else{
+                    reject(email.value)
+                }
+            
+        })
+    })
+        let checkmynumber = new Promise((resolve, reject) => {
+            btn2.addEventListener('click',()=>{
+                if(number.value == "123456789"){
+                    resolve(number)
+                    console.log("number is correct");
+                }
+                else{
+                    reject(number.value)
+                }
+            
         })
 
-        promise.then((result) => {
-            if(error){
-                console.log("No u r wrong");
+    })  
+        console.log(checkmynumber);
+        console.log(checkmyemail);    
 
-            }
-            else{
-                console.log("U r");
-            }
-        },
-            (error) => {
-                console.log("Don't Wory try again");
-            })
+
     </script>
 </body>
 

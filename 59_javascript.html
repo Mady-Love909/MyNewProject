@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>59th JS course</title>
+</head>
+<body>
+    <script>
+        // If programmer uses async keyword before the function then it should return promise
+
+        // async function mayank() {
+        //     return 5
+        // }
+        // mayank().then((x)=>{
+        //     alert(x)
+        // })
+        // async  function weatherFetching() {
+        //     let DelhiWeather =  new Promise((resolve, reject) => {
+        //         setTimeout(()=>{
+        //             resolve("21 Deg")
+        //         },2000)
+
+        //     })
+        //     let MaharashtraWeather =  new Promise((resolve, reject) => {
+        //         setTimeout(()=>{
+        //             resolve("27 Deg")
+        //         },4000)
+
+        //     })
+
+        //     console.log("Delhi Weather is Loading ...");
+        //     let DelhiW = await DelhiWeather
+        //     console.log("Delhi Weather has been Loaded "+DelhiW);
+        //     console.log("Maharashtra Weather is Loading ...");
+        //     let MahaW = await MaharashtraWeather
+        //     console.log("Maharashtra Weather has been Loaded "+MahaW);
+        //     return [DelhiW,MahaW]
+        // }    
+
+        // let a = weatherFetching()
+        // a.then((value)=>{
+        //     console.log(value);
+        // })
+        async function alertmsg() {
+            let a = new Promise((resolve, reject) => {
+                setTimeout(()=>{
+                    resolve("Hii")
+                    console.log("Mayank");
+                },4000)
+            })
+            
+            let c = await a;
+            console.log(c);
+            return c
+        }
+        let b = alertmsg()
+        b.then((value)=>{
+            console.log(value);
+            console.log("Completed");
+        })
+
+    </script>
+</body>
+</html>

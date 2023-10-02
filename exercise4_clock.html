@@ -68,7 +68,7 @@
     <div class="container">
         <h1>The Digital Clock</h1>
         <div class="digitalclock">
-            <h1>Date : <span id="date"> </span> - <span id="month"></span> - <span id="years"></span>
+            <h1><span id="day"></span>| Date : <span id="date"> </span> - <span id="month"></span> - <span id="years"></span>
             </h1>
             <ul>
                 <li id="hours">00</li>:
@@ -78,6 +78,8 @@
         </div>
     </div>
     <script>
+        const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        let day = document.getElementById("day")
         let hours = document.getElementById("hours")
         let min = document.getElementById("min")
         let sec = document.getElementById("sec")
@@ -87,6 +89,7 @@
         let timerseconds = 0
         let a = new Date()
         
+        day.innerHTML = weekday[a.getDay()] +" "
         date.innerHTML = a.getDate()
         month.innerHTML = a.getMonth()
 

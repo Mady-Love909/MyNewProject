@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking website</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: rgb(39, 39, 39);
+            color: rgb(17, 196, 17);
+            font-size: 2rem;
+            
+
+        }
+        h1{
+            text-align: center;
+            font-family: Impact;
+            font-weight: 400;
+        }
+        .maincontainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 400px;
+            background-image: url('Hacker.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+            background-size: 800px ;
+            background-blend-mode:soft-light;
+           
+           
+        }
+        .form-layout{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .form-inputs{
+            margin: 10px;
+            padding: 15px;
+            /* border-radius: 10px; */
+            border: none;
+
+        }
+
+        .controls{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 800;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .controls:focus{
+            box-shadow: 0px 0px 25px darkblue;
+
+        }
+      
+        
+        .btn{
+            margin: 10px;
+            padding: 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+
+        }
+        .btn:hover{
+            opacity: 0.8;
+            box-shadow: 0px 0px 8px green;
+            margin: 10px;
+        }
+        .third{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>TRYTOGET INFORMATION</h1>
+    <div class="maincontainer">
+        <form action="#" class="form-layout">
+            <input type="search" name="" id="search" placeholder="Type your name" class="form-inputs controls" required>
+            <input type="number" name="" id="phno" placeholder="Type Your Phone Number" class="form-inputs controls" required>
+            <button id="btn" class=" btn" >Click me</button>
+        </form>
+
+
+
+    </div>
+    <div class="third"></div>
+    <div class="second">Hi</div>
+    <script>
+  phno.onclick=()=>{
+    phno.style.inputmode = "nummber"
+  }
+
+  $("btn").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
+});
+    </script>
+</body>
+</html>

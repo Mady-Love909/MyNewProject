@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>61th Day JD Course</title>
+</head>
+<body>
+    <script>
+        try {
+            let age = prompt("Enter Your Full Name: ")
+            
+                if(age == "Mayank Subhash Sakat"){
+
+                    console.log("Welcome to our website");
+                }
+                else{
+
+                    throw new SyntaxError("Here Your Name is incorrect")
+                }
+                
+        } catch (error) {
+            console.log(error.name);
+            console.log(error.message);
+        }
+    </script>
+</body>
+</html>

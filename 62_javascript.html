@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // We seen try , catch block now let's study finally if both run successfully or anyone get incomplete in any condition finally always run
+
+        let f = () => {
+
+            try {
+                // console.log(mayank);
+                console.log("Mayank");
+                return
+
+            } catch (error) {
+                console.log("We are in catch block");
+                // console.log(mayank);
+            }
+            finally {
+                console.log("Error handling is completed");
+            }
+        }
+
+        f()//here return is also don't stop to exectue the finally block it always runs
+    </script>
+</body>
+
+</html>

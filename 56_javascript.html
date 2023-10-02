@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>56th Day js course</title>
+</head>
+
+<body>
+    <script>
+        // Promise Chaining 
+
+        // let p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         // console.log("Resolved after 2 seconds");
+        //         let name = prompt("Enter the name")
+        //         if(name != "Mayank"){
+        //             reject(name)
+        //         }
+        //         else{
+
+        //             resolve(name)
+        //         }
+        //     }, 2000)
+        // }).then((value) => {
+        //     // console.log(value);
+
+            
+        //     setTimeout(() => {
+        //         console.log(".then() Resolved after 2 seconds");
+        //         let surname = prompt("Enter the surname")
+        //         if(surname == "Sakat")
+        //         {
+        //             console.log("Successefully logged IN " + value);
+        //             return value
+        //         }
+
+        //     }, 2000)
+            
+            
+        //     }
+        //     ,(error)=>{
+        //         console.error("I am Error")
+        //     }).then((value)=>{
+        //         setTimeout(() => {
+        //             console.log(".then() Inner   Resolved after 2 seconds");
+        //         let age = prompt("Enter the age")
+
+        //             if(age >= 20)
+        //         {
+        //             console.log("Successefully logged IN ");
+        //         }
+        //             // console.log(value);
+        //         }, 2000)
+
+        //     },(error)=>{
+        //         console.log("Error");
+        //     })
+            
+       
+        // }).then((error,value) => {
+        //     // console.log(value);
+        //     // setTimeout(() => {
+        //     //     console.log("Inner .then() Resolved after 2 seconds");
+                
+        //     // }, 5000)
+        //         if(error){
+        //             console.log("Error");
+        //         }
+        // })
+
+        let loadScript = (src) =>{
+            return new Promise((resolve,reject)=>{
+                let script = document.createElement("script")
+                script.type = "text/javascript"
+                script.src = src;
+                script.onload = () => {
+                    resolve("Script has been Loaded")
+
+                }
+               script.onerror = () => {
+                reject(0)
+               } 
+               document.body.appendChild(script)
+            });
+
+        let p1 = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js")
+        p1.then((value) =>{
+            console.log(value);
+            return loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js")
+
+        }).then((value)=>{
+            console.log("Second script is ready");
+
+        }).catch((error)=>{
+            console.log("We have some issues to loading the Script");
+        })
+
+        }
+
+    </script>
+</body>
+
+</html>
