@@ -11,14 +11,18 @@
         body{
             background-color: rgb(39, 39, 39);
             color: rgb(17, 196, 17);
-            font-size: 2rem;
+            font-size: 2.8rem;
             
 
         }
         h1{
             text-align: center;
             font-family: Impact;
-            font-weight: 400;
+            font-weight: lighter;
+            -webkit-text-stroke: 4px;
+            -webkit-text-stroke-color: green;
+            color: transparent;
+
         }
         .maincontainer{
             display: flex;
@@ -26,13 +30,12 @@
             align-items: center;
             flex-direction: column;
             height: 400px;
-            background-image: url('Hacker.jpg');
+            background-image: url('Hacker2.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-clip: border-box;
             background-size: 800px ;
-            background-blend-mode:soft-light;
-           
+            /* background-blend-mode:soft-light;            */
            
         }
         .form-layout{
@@ -57,7 +60,7 @@
             background-color: transparent;
             border: none;
             border-bottom: 2px solid white;
-            color: white;
+            color: rgb(13, 195, 13);
             font-size: 0.9rem;
             font-weight: 800;
             font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -89,10 +92,10 @@
     </style>
 </head>
 <body>
-    <h1>TRYTOGET INFORMATION</h1>
+    <h1>HACKERMAN</h1>
     <div class="maincontainer">
         <form action="#" class="form-layout">
-            <input type="search" name="" id="search" placeholder="Type your name" class="form-inputs controls" required>
+            <input type="email" name="" id="search" placeholder="Type your email ID" class="form-inputs controls" required>
             <input type="number" name="" id="phno" placeholder="Type Your Phone Number" class="form-inputs controls" required>
             <button id="btn" class=" btn" >Click me</button>
         </form>
@@ -107,11 +110,6 @@
     phno.style.inputmode = "nummber"
   }
 
-  $("btn").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".second").offset().top},
-        'slow');
-});
-    </script>
+</script>
 </body>
 </html>

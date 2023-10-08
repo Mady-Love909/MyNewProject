@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>66 Day JS course </title>
+</head>
+
+<body>
+    <script>
+        let p = fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
+        p.then(async (response) => {
+            alert("We starting the weather API")
+            console.log(response);
+            console.log(response.status);
+            console.log(response.ok);
+            console.log(response.headers);
+            // await console.log("Hi");
+            return response.json()
+        }
+        ).then((value2) => {
+            // console.log(value2);    
+            console.log(value2.current_weather);
+
+        })
+
+        p.catch((value1) => {
+            console.log("We found Some errors");
+        })
+
+    </script>
+</body>
+
+</html>
